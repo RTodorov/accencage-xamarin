@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{8FFB629D-F513-41CE-95D2-7ECE97B6EEEC};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{3520FC6E-E7F4-49F2-990F-CFDCFE644F77}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Accengage.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Accengage.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Accengage.iOS">
+      <HintPath>..\..\Beauty-App\Dependencies\Accengage.iOS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Resources\A4S.bundle\" />
+    <Folder Include="Resources\TemplatesWithCloseButton\" />
+    <Folder Include="Resources\TemplatesWithCloseButton\InterstitialTextNotif" />
+    <Folder Include="Resources\TemplatesWithCloseButton\InterstitialWebView" />
+    <Folder Include="Resources\TemplatesWithCloseButton\InterstitialWebViewWithToolBar" />
+    <Folder Include="Resources\TemplatesWithCloseButton\RichPushWebView" />
+    <Folder Include="Resources\TemplatesWithCloseButton\RichPushWebViewWithToolBar" />
+    <Folder Include="Resources\TemplatesWithCloseButton\TextBanner" />
+    <Folder Include="Resources\TemplatesWithCloseButton\WebViewBanner" />
+    <Folder Include="Resources\TemplatesWithoutCloseButton\" />
+    <Folder Include="Resources\TemplatesWithoutCloseButton\InterstitialTextNotif" />
+    <Folder Include="Resources\TemplatesWithoutCloseButton\InterstitialWebView" />
+    <Folder Include="Resources\TemplatesWithoutCloseButton\InterstitialWebViewWithToolBar" />
+    <Folder Include="Resources\TemplatesWithoutCloseButton\RichPushWebView" />
+    <Folder Include="Resources\TemplatesWithoutCloseButton\RichPushWebViewWithToolBar" />
+    <Folder Include="Resources\TemplatesWithoutCloseButton\TextBanner" />
+    <Folder Include="Resources\TemplatesWithoutCloseButton\WebViewBanner" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="libBMA4SSDK.linkwith.cs">
+      <DependentUpon>libBMA4SSDK.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="libBMA4SSDK.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BMA4SCloseButton.png" />
+    <BundleResource Include="Resources\A4S.bundle\A4SBackward.png" />
+    <BundleResource Include="Resources\A4S.bundle\A4SClose.png" />
+    <BundleResource Include="Resources\A4S.bundle\A4SForward.png" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-landscape-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-landscape-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-landscape-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-landscape-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-landscape.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-landscape-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-landscape-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-landscape-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-landscape-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-landscape.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-landscape-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-landscape-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-landscape-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-landscape-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-landscape.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\RichPushWebView\BMA4SRichPushWebView-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\RichPushWebView\BMA4SRichPushWebView.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\RichPushWebViewWithToolBar\BMA4SRichPushWebViewWithToolBar-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\RichPushWebViewWithToolBar\BMA4SRichPushWebViewWithToolBar.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\TextBanner\BMA4SiPhoneTextNotifView-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\TextBanner\BMA4SiPhoneTextNotifView-landscape-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\TextBanner\BMA4SiPhoneTextNotifView-landscape-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\TextBanner\BMA4SiPhoneTextNotifView-landscape-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\TextBanner\BMA4SiPhoneTextNotifView-landscape-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\TextBanner\BMA4SiPhoneTextNotifView-landscape.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\TextBanner\BMA4SiPhoneTextNotifView-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\TextBanner\BMA4SiPhoneTextNotifView-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\TextBanner\BMA4SiPhoneTextNotifView.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-landscape-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-landscape-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-landscape-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-landscape-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-landscape.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-nobuttons-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-nobuttons-landscape-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-nobuttons-landscape-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-nobuttons-landscape-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-nobuttons-landscape-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-nobuttons-landscape.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-nobuttons-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-nobuttons-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-nobuttons-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialTextNotif\BMA4SiPhoneIntersticialTextNotifView-nobuttons.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-nobuttons-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-nobuttons-landscape-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-nobuttons-landscape-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-nobuttons-landscape-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-nobuttons-landscape-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-nobuttons-landscape.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-nobuttons-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-nobuttons-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-nobuttons-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebView\BMA4SiPhoneIntersticialWebViewNotifView-nobuttons.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-nobuttons-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-nobuttons-landscape-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-nobuttons-landscape-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-nobuttons-landscape-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-nobuttons-landscape-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-nobuttons-landscape.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-nobuttons-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-nobuttons-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-nobuttons-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\InterstitialWebViewWithToolBar\BMA4SiPhoneIntersticialWebViewWithToolBarNotifView-nobuttons.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\RichPushWebView\BMA4SRichPushWebView-nobuttons-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\RichPushWebView\BMA4SRichPushWebView-nobuttons.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\RichPushWebViewWithToolBar\BMA4SRichPushWebViewWithToolBar-nobuttons-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\RichPushWebViewWithToolBar\BMA4SRichPushWebViewWithToolBar-nobuttons.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\TextBanner\BMA4SiPhoneTextNotifView-nobuttons-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\TextBanner\BMA4SiPhoneTextNotifView-nobuttons-landscape-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\TextBanner\BMA4SiPhoneTextNotifView-nobuttons-landscape-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\TextBanner\BMA4SiPhoneTextNotifView-nobuttons-landscape-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\TextBanner\BMA4SiPhoneTextNotifView-nobuttons-landscape-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\TextBanner\BMA4SiPhoneTextNotifView-nobuttons-landscape.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\TextBanner\BMA4SiPhoneTextNotifView-nobuttons-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\TextBanner\BMA4SiPhoneTextNotifView-nobuttons-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\TextBanner\BMA4SiPhoneTextNotifView-nobuttons.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-nobuttons-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-nobuttons-landscape-iPad.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-nobuttons-landscape-ret4.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-nobuttons-landscape-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-nobuttons-landscape-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-nobuttons-landscape.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-nobuttons-ret6.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-nobuttons-retHD.xib" />
+    <BundleResource Include="Resources\TemplatesWithoutCloseButton\WebViewBanner\BMA4SiPhoneWebViewNotifView-nobuttons.xib" />
+  </ItemGroup>
+</Project>
